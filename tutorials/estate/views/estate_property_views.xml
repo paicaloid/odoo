@@ -28,12 +28,16 @@
                         <field name="name" />
                     </h1>
                     <group>
+                        <field name="tags_id" widget="many2many_tags" />
+                    </group>
+                    <group>
                         <group>
-                            <field name="name" />
+                            <field name="type_id" />
+                            <field name="postcode" />
                             <field name="date_availability" />
                         </group>
                         <group>
-                            <field name="postcode" />
+                            <field name="expected_price" />
                             <field name="selling_price" />
                         </group>
 
@@ -46,23 +50,23 @@
                                 <field name="bedrooms" string="Bedrooms" />
                                 <field name="living_area" string="Living Area (sqm)" />
                                 <field name="facades" string="Facades" />
-                                <garage name="garage" string="Garage" />
+                                <field name="garage" string="Garage" />
                                 <field name="garden" string="Garden" />
                                 <field name="garden_area" string="Garden Area (sqm)" />
                                 <field name="garden_orientation" string="Garden Orientation" />
 
                             </group>
-                            <!-- <div>
-                                <label for="description" string="Description" />
-                                <field name="description" />
-                                <div>
-                                    <field name="description" />
-
-                                </div>
-                            </div>
-                            <label for="bedrooms" string="Bedrooms" />
-                            <field name="bedrooms" string="Bedrooms" /> -->
-
+                        </page>
+                        <page string="Offers">
+                            <group>
+                                <!-- <field name="offer_ids.price" string="Price" /> -->
+                            </group>
+                        </page>
+                        <page string="Other Info">
+                            <group>
+                                <field name="user_id" string="Salesman" />
+                                <field name="partner_id" string="Buyer" />
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
